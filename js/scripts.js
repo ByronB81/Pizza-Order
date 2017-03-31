@@ -19,57 +19,59 @@ Pizza.prototype.total = function() {
     price = price + 1;
   }
   var tax = (price * 0.18).toFixed(2);
-  total = price + tax;
+  var total = price + tax;
   console.log(total);
 };
 
 
-
+// alert("WTF");
 
 //Front End
 
-$(function() {
+$(document.ready(function(){
   $("#blanks form").submit(function(event){
     event.preventDefault();
-    var orderName = $("input#customer-name").val();
-    var pizzaSize = $("#pizza-size").val();
-    var pizzaTopping = $("input:checkbox[name-topping]:checked");
-    var newPizza= new Pizza(orderName, pizzaSize);
-    if (orderName){
-      if (pizzaSize) {
-        if (pizzaTopping) {
-
-          $.each($(pizzaTopping), function() {
-            newPizza.topping.push($(this).val());
-          });
-
-          newPizza.total();
-          console.log(total);
-          $("order-name").text(newPizza.name);
-          $(".pizza-size-output").text(newPizza.size);
-          $(".pizza-toppings-output1").text("WHY YOU NO WORK?");
-          alert("topping worked");
-
-        }
-        alert("sizer worked");
-
-        $(".pizza-price-output").text(newPizza.price);
-        $("#output").show();
-        $("#size-alert").hide();
-        $("#name-alert").hide();
-        resetFields();
-      } else{
-      $("#size-alert").show();
-      $("#name-alert").hide();
-    }
-    $("#size-alert").show();
-    $("#name-alert").hide();
-  }
-    // else {
-    // $("#name-alert").show();
-    // $("#size-alert").hide();
-    // }
-  }
-
-  
+  })
 });
+    // var orderName = $("input#customer-name").val();
+    // var pizzaSize = $("#pizza-size").val();
+    // var pizzaTopping = $("input:checkbox[name-topping]:checked");
+    // var newPizza= new Pizza(orderName, pizzaSize);
+  //   if (orderName) {
+  //     if (pizzaSize) {
+  //       if (pizzaTopping) {
+  //
+  //         $.each($(pizzaTopping), function() {
+  //           newPizza.topping.push($(this).val());
+  //         });
+  //
+  //         newPizza.total();
+  //         console.log(total);
+  //         $("order-name").text(newPizza.name);
+  //         $(".pizza-size-output").text(newPizza.size);
+  //         $(".pizza-toppings-output1").text("WHY YOU NO WORK?");
+  //         alert("topping worked");
+  //
+  //       }
+  //       alert("sizer worked");
+  //
+  //       $(".pizza-price-output").text(newPizza.price);
+  //       $("#output").show();
+  //       $("#size-alert").hide();
+  //       $("#name-alert").hide();
+  //       resetFields();
+  //     } else{
+  //     $("#size-alert").show();
+  //     $("#name-alert").hide();
+  //   }
+  //   $("#size-alert").show();
+  //   $("#name-alert").hide();
+  // }
+  //   else {
+  //   $("#name-alert").show();
+  //   $("#size-alert").hide();
+  // }
+// });
+//
+//
+// });
