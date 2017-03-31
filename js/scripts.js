@@ -8,13 +8,14 @@ function Pizza(topping, size) {
 var price = 0
 
 Pizza.prototype.total = function() {
-    if (size = "Small") {
+    if (this.size === "Small") {
       price = 12;
     };
-    if (size = "Large"){
+    if (this.size === "Large"){
       price = 18;
     };
     for (i = 1; i <= this.topping.length; i++){
+      console.log(this.topping.length);
     price = price + 1;
   }
   var tax = (price * 0.18);
