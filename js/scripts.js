@@ -41,10 +41,10 @@ $(function() {
 
           $.each($(pizzaTopping), function() {
             newPizza.topping.push($(this).val());
-          })
+          });
 
           newPizza.total();
-          console.log(total)
+          console.log(total);
           $("order-name").text(newPizza.name);
           $(".pizza-size-output").text(newPizza.size);
           $(".pizza-toppings-output1").text("WHY YOU NO WORK?");
@@ -62,10 +62,14 @@ $(function() {
       $("#size-alert").show();
       $("#name-alert").hide();
     }
-    else{
-    $("#name-alert").show();
-    $("#size-alert").hide();
-    }
-
+    $("#size-alert").show();
+    $("#name-alert").hide();
   }
+    // else {
+    // $("#name-alert").show();
+    // $("#size-alert").hide();
+    // }
+  }
+
+  
 });
