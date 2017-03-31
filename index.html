@@ -14,26 +14,51 @@
         <h1>Pizza</h1>
         <h3>Order a pizza</h3>
       </div>
-      <!--Radio Buttons-->
-      <form id="radio-topping">
-        <div class="form-group">
-          <p>Pick your pizza size</p>
-          <div class="checkbox">
-            <label><input type="checkbox" name="size" value="Large">Large</label>
+      <!--form-->
+      <div id="blanks">
+        <form id="pizza-build">
+
+          <div class="form-group">
+            <div id="name-alert" class="my-alert bt-danger">
+                <p><strong>Don't forget to enter a name!</strong></p>
+            </div>
+            <input id="customer-name" type="text" class="form-control" placeholder="Your name">
           </div>
-        </div>
-        <div class="form group">
-          <p>Pick your favorite toppings!</p>
-          <div class="checkbox">
-            <label><input type="checkbox" name="topping" value="Pepperoni">Pepperoni</label>
+
+          <div class="form-group">
+            <div id="size-alert" class="my-alert bt-danger">
+                <p><strong>Pick your pizza size!</strong></p>
+            </div>
+            <select id="pizza-size" class="form-control" name="size">
+              <option value="size" selected disabled>Pick a size</option>
+              <option value="Large">Large</option>
+              <option value="Small">Small</option>
+            </select>
           </div>
-        </div>
+
+          <div class="form group">
+            <label for="topping">Optional toppings to add to your pizza</label>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="topping" value="Pepperoni">Pepperoni</label>
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="topping" value="Jalepenos">Jalepenos</label>
+              </label>
+            </div>
+          </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
 
-
-      </form>
-
+        </form>
+      </div>
+      <div id="output">
+        <h3><span id="order-name"></span>'s order:</h3>
+        <p>1 <span id="pizza-size-output"></span> <span id="pizza-topping-output1"></span><span class="pizza-toppings-output3"></span><span class="pizza-toppings-output2"></span>.</p>
+        <p id="total">Total: $<span id="pizza-price-output"></span></p>
+      </div>
     </div>
 
   </body>
