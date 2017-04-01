@@ -1,10 +1,12 @@
 body {
-  background-color: yellow;
+  background-color: SandyBrown;
+  color: black;
 }
 
 .jumbotron {
-  background-color: LightSteelBlue;
+  background-color: Tomato;
   text-align: center;
+  color: black;
 }
 
 img {
@@ -14,6 +16,19 @@ img {
   }
 
 #pizza-copy p {
+  padding-top: 1em;
   text-align: justify;
   font-size: 16px;
+}
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+
+#blanks {
+  padding-top: 2em;
 }
