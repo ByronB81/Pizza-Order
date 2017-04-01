@@ -32,3 +32,9 @@ img {
 #blanks {
   padding-top: 2em;
 }
+
+#output {
+  font-size: 20px;
+  background-color: Tomato;
+  font-weight: bold;
+}
