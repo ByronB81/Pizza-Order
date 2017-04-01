@@ -1,3 +1,19 @@
 body {
   background-color: yellow;
 }
+
+.jumbotron {
+  background-color: LightSteelBlue;
+  text-align: center;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+  }
+
+#pizza-copy p {
+  text-align: justify;
+  font-size: 16px;
+}
