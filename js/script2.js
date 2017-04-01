@@ -45,6 +45,8 @@ function placeOrder() {
       toppingsString = toppingsString + "Pepperoni and Jalapenos";
    else if (pepperoni == true && jalapenos == false)
       toppingsString = toppingsString + "Pepperoni";
+    else if (pepperoni == false && jalapenos == true)
+      toppingsString = toppingsString + "Jalapenos";
    document.getElementById("output").innerHTML = custName + "'s Order<br />" + "Size: " + size + "<br />" + "Toppings: " + toppingsString;
   }
 }
