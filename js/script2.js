@@ -27,6 +27,7 @@ Pizza.prototype.calculateTotal = function() {
 function placeOrder() {
   document.getElementById("name-alert").innerHTML = "";
 
+
    var custName = document.getElementById("customer-name").value;
    if (custName == "")
      document.getElementById("name-alert").innerHTML = "<p><strong>Don't forget to enter a name!</strong></p>";
